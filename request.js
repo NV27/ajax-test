@@ -9,12 +9,22 @@
     
 // })
 
-fetch("https://dev.io-academy.uk/resources/bond.php").then((response) => {
+// fetch("https://dev.io-academy.uk/resources/bond.php").then((response) => {
+//     return response.json()
+// }).then((data) => {
+//     console.log(data)
+//     d = data.data
+//     for(i=0; i < d.length; i++){
+//         document.querySelector('.output').innerHTML += `<li>${d[i].name}: ${d[i].release_date}</li>`
+//     }
+// })
+
+fetch("https://dev.io-academy.uk/resources/bond.php").then(response => {
     return response.json()
-}).then((data) => {
+}).then(data => {
     console.log(data)
     d = data.data
-    document.querySelector('.output').innerHTML = for(i=0; i < d.length; i++){
-        
+    for(i=0; i < d.length; i++){
+        document.querySelector('.output').innerHTML += `<li>${d[i].name}: ${d[i].release_date}</li>`
     }
 })
